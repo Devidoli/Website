@@ -35,6 +35,10 @@
             overflow-x: hidden;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Essential for Bootstrap compatibility */
         .container {
             width: 100%;
@@ -364,31 +368,32 @@
 <body>
     <div class="page-wrapper">
         <!-- Full screen hero section -->
-        <div class="hero overlay" style="background: url('backround4.jpg');">
-            <nav class="site-nav">
-                <div class="container">
-                    <div class="site-navigation">
-                        <ul class="site-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        <nav class="site-nav" style="width:100%; position:fixed; top:0; left:0; z-index:1000; background:transparent;">
+            <div class="site-navigation" style="display:flex; justify-content:flex-end; align-items:center; width:100%; padding: 0.75rem 2rem 0.75rem 0;">
+                <ul class="js-clone-nav site-menu" style="margin:0; padding:0; list-style:none; display:flex; gap:1.5rem;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Contact Me</h1>
-                    <p>Let's explore this digital world together.</p>
-                    <p>
-                        <a href="#contact-form" class="btn">Get in Touch</a>
+        
+    <div class="hero v-h-full overlay" style="background-image: url('backround4.jpg'); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="row align-items-center v-h-full">
+                <div class="col-lg-7 col-xxl-6 mx-auto text-center">
+                    <h1 class="heading-2 text-white mb-3" data-aos="fade-up">Contact Me</h1>
+                    <p data-aos="fade-up" data-aos-delay="200" class="text-white lead mb-4">Lets explore this digital world together</p>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        <a href="#contact-section" class="btn btn-primary-outline white me-4">Get in Touch</a>
                     </p>
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- Form section begins - appears after scrolling -->
         <div id="contact-form" class="section section-contact">
@@ -447,7 +452,7 @@
             </div>
         </div>
 
-        <div class="site-footer">
+        <div class="site-footer" id="contact-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -465,9 +470,9 @@
                         <div class="widget">
                             <h3>Links</h3>
                             <ul class="list-unstyled links">
-                                <li><a href="#">Our Vision</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">My Vision</a></li>
+                                <li><a href="#">About me</a></li>
+                                <li><a href="#">Contact me</a></li>
                             </ul>
 
                             <ul class="list-unstyled social">
